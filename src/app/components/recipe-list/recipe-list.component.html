@@ -1,0 +1,48 @@
+<div class="header">
+  <img src="/assets/images/sweeft.svg" alt="" />
+  <div class="header-text">
+    <h1>Recipe List</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+
+<div class="controls">
+  <div class="search-fav">
+    <div class="search-box">
+      <button class="btn-search"><i class="fas fa-search"></i></button>
+      <input
+        type="text"
+        [(ngModel)]="searchQuery"
+        class="input-search"
+        placeholder="Type to Search..."
+      />
+    </div>
+    <label>
+      <input type="checkbox" [(ngModel)]="showFavoritesOnly" />
+      Show Favorites Only
+    </label>
+  </div>
+  <div class="new-recipe">
+    <button routerLink="/add-recipe">Add New Recipe</button>
+  </div>
+</div>
+
+<div class="recipe-list">
+  <div *ngFor="let recipe of filteredRecipes()" class="recipe-card">
+    <img [src]="recipe.image" alt="{{ recipe.title }} image" />
+
+    <div class="recipe-details">
+      <h3>{{ recipe.title }}</h3>
+      <hr />
+      <p>{{ recipe.description }}</p>
+      <i
+        class="favorite-icon fa-solid fa-star"
+        [class.active]="recipe.isFavorite"
+        (click)="toggleFavorite(recipe)"
+      ></i>
+      <a [routerLink]="['/recipe', recipe.id]">
+        View Details <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</div>

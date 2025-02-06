@@ -1,0 +1,60 @@
+<div class="recipe-form-container">
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()" class="recipe-form">
+    <h2>Add New Recipe</h2>
+
+    <div class="form-group">
+      <label>Title</label>
+      <input
+        type="text"
+        formControlName="title"
+        placeholder="Enter recipe title"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <textarea
+        formControlName="description"
+        placeholder="Enter recipe description"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Ingredients</label>
+      <textarea
+        formControlName="ingredients"
+        placeholder="List ingredients"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Instructions</label>
+      <textarea
+        formControlName="instructions"
+        placeholder="Write instructions"
+      ></textarea>
+    </div>
+
+    <div class="form-group file-upload-wrapper">
+      <label for="fileUpload" class="file-label">
+        <i class="fa-solid fa-paperclip"></i>
+        <span *ngIf="!selectedFile">Attach Image</span>
+        <span *ngIf="selectedFile">{{ selectedFile.name }}</span>
+      </label>
+      <input
+        #fileInput
+        id="fileUpload"
+        type="file"
+        (change)="onFileSelect($event)"
+        hidden
+      />
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="recipeForm.invalid || !selectedFile">
+        Save Recipe
+      </button>
+      <a routerLink="" class="cancel-button">Cancel</a>
+    </div>
+  </form>
+</div>

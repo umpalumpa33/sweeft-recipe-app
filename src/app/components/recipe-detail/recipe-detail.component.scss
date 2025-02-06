@@ -1,0 +1,68 @@
+.back-link {
+  text-decoration: none;
+  color: black;
+  margin-left: 5vw;
+  padding: 2vh 2vw;
+  border: 1px solid black;
+}
+
+.back-link:hover {
+  font-weight: bold;
+  background-color: #012334;
+  color: white;
+}
+
+div img {
+  max-width: 800px;
+  height: auto;
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  width: 87.5%;
+  margin: 0 auto;
+  gap: 5vh;
+  padding: 5vh 0;
+}
+
+.recipe h2 {
+  margin-bottom: 5vh;
+  color: rgb(53, 53, 53);
+  font-family: "rufus";
+  font-weight: 700;
+  align-self: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: black;
+  padding: 2vh 2vw;
+  border: 1px solid black;
+}
+
+.buttons a:hover {
+  font-weight: bold;
+  background-color: #012334;
+  color: white;
+}
+
+.buttons button {
+  text-decoration: none;
+  color: black;
+  padding: 2vh 2vw;
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+.buttons button:hover {
+  background-color: #012334;
+  cursor: pointer;
+  color: white;
+}
