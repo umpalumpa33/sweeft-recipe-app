@@ -1,27 +1,40 @@
-# RecipeSharingApp
+A simple Angular-based application for creating, editing, viewing, and managing recipes. The app supports features like image uploads, search, and recipe favoriting.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
+Features:
+**Create, View, Update, and Delete Recipes**: Manage your favorite recipes efficiently.
+**Image Uploads**: Upload recipe images using an external image hosting service.
+**Favorites**: Mark recipes as favorites.
+**Search Functionality**: Search recipes by title or ingredients.
+**Responsive UI**: Optimized for different screen sizes.
 
-## Development server
+Follow these steps to set up and run the project on your local machine:
+Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Make sure you have the following installed:
 
-## Code scaffolding
+    Node.js (v16 or higher recommended)
+    Angular CLI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Installation**
 
-## Build
+    Clone the repository to your local machine:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+git clone <repository-url>
 
-## Running unit tests
+Navigate to the project directory:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+cd <project-directory>
 
-## Running end-to-end tests
+Install the dependencies:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    npm install
 
-## Further help
+    
+**
+Running the Application
+**
+To start the development server, run:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ng serve
+
+npx json-server --watch db.json
